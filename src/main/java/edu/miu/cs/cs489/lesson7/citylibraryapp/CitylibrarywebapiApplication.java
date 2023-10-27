@@ -9,7 +9,8 @@ import org.springframework.context.annotation.Bean;
 public class CitylibrarywebapiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CitylibrarywebapiApplication.class, args);
+        SpringApplication.run(CitylibrarywebapiApplication.class, 
+                                    args);
     }
 
     @Bean

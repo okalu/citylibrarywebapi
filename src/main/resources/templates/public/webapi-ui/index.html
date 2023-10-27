@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head th:replace="~{fragments/head-elements :: headElements}"></head>
+  <title>City Library - Web API</title>
+
+  <style>
+    div#home-text-sections {
+      display: flex;
+      gap: 1em;
+      margin: 1em 0 1em 0;
+    }
+    div#home-text-sections section {
+      border: 2px solid #ababab;
+      padding: 0.6em;
+    }
+    p.web-api-uri-title {
+        font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="page-content">
+    <header th:replace="~{fragments/header :: header}"></header>
+    <main>
+      <h2>CityLibrary - Web API</h2>
+      <hr>
+      <div>
+        <section>
+          <h3>System Administration - eCatalog Management</h3>
+          <br>
+          <h4>Publisher data management</h4>
+          <ul>
+            <li>
+                <div>
+                    <p class="web-api-uri-title">List of all Publishers</p>
+                    <p>HTTP Request type: GET</p>
+                    <p>
+                        URI: <a target="_blank" href="/citylibrary/api/v1/publisher/list">
+                            /citylibrary/api/v1/publisher/list
+                        </a>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="web-api-uri-title">Get Publisher by PublisherId</p>
+                    <p>HTTP Request type: GET</p>
+                    <p>
+                        URI: <a target="_blank" href="/citylibrary/api/v1/publisher/1">
+                            /citylibrary/api/v1/publisher/{publisherId}
+                        </a>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="web-api-uri-title">Add a new Publisher</p>
+                    <p>HTTP Request type: POST</p>
+                    <p>
+                        URI: 
+                            /citylibrary/api/v1/publisher/new
+                        
+                    </p>
+                </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+    <footer th:replace="~{fragments/footer :: footer}"></footer>
+  </div>
+</body>
+</html>
